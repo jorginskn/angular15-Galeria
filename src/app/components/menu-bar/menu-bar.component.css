@@ -35,6 +35,7 @@
 
 .menubar__itens li {
   margin: 0 10px; /* Adiciona margem entre os itens */
+  margin-left: 1rem;
 }
 
 .menubar__itens ul li a {
@@ -65,6 +66,7 @@ mat-icon {
 
   .menubar__container__mobile {
     position: relative;
+    width: 200px;
   }
 
   .menubar__visible {
@@ -73,22 +75,31 @@ mat-icon {
 
   .menubar__itens__mobile {
     display: flex;
+    transition: 0.9s;
     justify-content: center;
-    position: absolute;
     opacity: 1;
     visibility: visible;
     margin: 15px;
+
     flex-direction: column;
     left: 5px;
     max-width: 50vw;
   }
+  .menu__itens__link {
+    transition: 0.9s;
+    color: white;
+    color: inherit white;
+    padding: 50px;
+  }
   .menubar__itens__mobile ul li {
     display: flex;
+
+    position: relative;
+    left: -54px;
     flex-direction: column;
-    list-style: none;
-    text-decoration: none;
     font-weight: 400;
     font-size: 20px;
+    background-color: #202020;
   }
 
   mat-icon {

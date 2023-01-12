@@ -18,9 +18,9 @@
       </mat-icon>
       <div class="menubar__itens__mobile" *ngIf="navbarOpen">
         <ul>
-          <li><a href="" class="menu__itens__link">Home</a></li>
-          <li><a href="" class="menu__itens__link">About</a></li>
-          <li><a href="" class="menu__itens__link">Contact</a></li>
+          <li><a routerLink="/" (click)="toggleNavbar()" class="menu__itens__link">HOME</a></li>
+          <li><a routerLink="empresa" (click)="toggleNavbar()" class="menu__itens__link">GALERIA TECH</a></li>
+          <li><a routerLink="filmes" (click)="toggleNavbar()" class="menu__itens__link">GALERIA DE FILMES</a></li>
         </ul>
       </div>
     </div>
