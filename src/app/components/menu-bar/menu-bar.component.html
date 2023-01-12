@@ -2,13 +2,15 @@
 <nav>
   <div class="menubar__container">
     <div class="menubar__logo">
-      <img class="menubar__logo__image" src="../../../assets/jpv_logo.png" alt="">
+      <a routerLink="/">
+        <img class="menubar__logo__image" src="../../../assets/jpv_logo.png" alt="">
+      </a>
     </div>
     <div class="menubar__itens">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a routerLink="/">HOME</a></li>
+        <li><a routerLink="empresa">GALERIA TECH</a></li>
+        <li><a routerLink="filmes">GALERIA DE FILMES</a></li>
       </ul>
     </div>
     <div class="menubar__container__mobile">
@@ -17,7 +19,7 @@
       <div class="menubar__itens__mobile" *ngIf="navbarOpen">
         <ul>
           <li><a href="" class="menu__itens__link">Home</a></li>
-          <li><a href="" class="menu__itens__link">Sobre</a></li>
+          <li><a href="" class="menu__itens__link">About</a></li>
           <li><a href="" class="menu__itens__link">Contact</a></li>
         </ul>
       </div>

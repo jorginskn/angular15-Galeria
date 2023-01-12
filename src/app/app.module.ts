@@ -1,3 +1,5 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon';
@@ -9,17 +11,29 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { CardsGaleriaComponent } from './components/cards-galeria/cards-galeria.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { GaleriaEmpresaComponent } from './components/pages/galeria-empresa/galeria-empresa.component';
+import { GaleriaFilmesComponent } from './components/pages/galeria-filmes/galeria-filmes.component';
+
 @NgModule({
-  declarations: [AppComponent, MenuBarComponent, CardsGaleriaComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    MenuBarComponent,
+    CardsGaleriaComponent,
+    FooterComponent,
+    GaleriaEmpresaComponent,
+    GaleriaFilmesComponent,
+  ],
   providers: [],
   bootstrap: [AppComponent],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
     MatToolbarModule,
     MatSidenavModule,
+    RouterModule,
   ],
 })
 export class AppModule {}

@@ -1,15 +1,25 @@
+.galeria__container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  height: max-content;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
 .card__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 5px;
   padding-top: 6.5rem;
-  min-height: 80vh;
-
 }
 
 .card {
-  width: 300px;
+  width: 250px;
   margin: 10px 30px 0px 0px;
   box-shadow: 2px 2px 10px #ccc;
 }
