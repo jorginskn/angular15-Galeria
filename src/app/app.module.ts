@@ -14,7 +14,6 @@ import { CardsGaleriaComponent } from './components/cards-galeria/cards-galeria.
 import { FooterComponent } from './components/footer/footer.component';
 import { GaleriaEmpresaComponent } from './components/pages/galeria-empresa/galeria-empresa.component';
 import { GaleriaPokemonComponent } from './components/pages/galeria-filmes/galeria-pokemon.component';
-import { PokemonComponent } from './components/pages/galeria-filmes/pokemon/pokemon.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,7 @@ import { PokemonComponent } from './components/pages/galeria-filmes/pokemon/poke
     FooterComponent,
     GaleriaEmpresaComponent,
     GaleriaPokemonComponent,
-    PokemonComponent,
+
   ],
   providers: [],
   bootstrap: [AppComponent],

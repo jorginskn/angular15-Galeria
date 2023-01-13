@@ -1,4 +1,5 @@
 <div class="card__container">
+  <h1 class="card__title-main">GALERIA</h1>
   <div class="card" *ngFor=" let pokemon  of pokemonData">
     <a routerLink="empresa">
       <img class="card__image" src="{{getPokemonImage(+pokemon.url.split('/')[6])}}" alt="Card Image">

@@ -21,8 +21,10 @@
   margin: 0;
 }
 .menubar__itens {
-  align-items: center; /* Centraliza verticalmente */
+  align-items: center;
   display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 .menubar__itens ul {
