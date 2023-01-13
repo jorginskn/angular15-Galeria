@@ -1,6 +1,14 @@
 import { Component } from '@angular/core';
 import { PokemonService } from '../services/pokemon.service';
-import { Subscription, Observable } from 'rxjs';
+import {
+  Subscription,
+  Observable,
+  map,
+  toArray,
+  flatMap,
+  range,
+  distinct,
+} from 'rxjs';
 import { Pokemon } from 'src/models/pokemon.model';
 import { PokemonImage } from 'src/models/pokemonImage.model';
 
@@ -13,27 +21,38 @@ export class GaleriaPokemonComponent {
   constructor(private pokemonService: PokemonService) {}
 
   pokemonData!: Pokemon[];
-  pokemonImage!: string;
-  pokemonId!: number;
-  pokemonIdImage!: [];
+  pokemonIdImageArray: { id: number; image: string }[] = [];
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.getDataPokemon();
   }
 
-  getDataPokemon() {
+  async getDataPokemon() {
     this.pokemonService.getDataPokemon().subscribe((res) => {
       this.pokemonData = res.results;
+      this.getPokemonImages();
     });
+  }
 
-    this.pokemonService.getPokemonImage(33).subscribe((res) => {
-      for (let i = 0; i <= 50; i++) {
-        this.pokemonId = res.id;
-        
-        this.pokemonId++;
-      }
+  getPokemonImages() {
+    const source = range(1, 50).pipe(
+      flatMap((i) => this.pokemonService.getPokemonImage(i)),
+      map((res) => {
+        console.log(res)
+        return {
+          id: res.id,
+          image: res.sprites.other.dream_world.front_default,
+        };
+      }),
+      distinct((item: { id: number; image: string }) => item.id)
+    );
 
-      this.pokemonImage = res.sprites.other.dream_world.front_default;
+    source.pipe(toArray()).subscribe((images) => {
+      this.pokemonIdImageArray = images;
     });
+  }
+  getPokemonImage(id: number): string {
+    const image = this.pokemonIdImageArray.find((img) => img.id === id);
+    return image ? image.image : '';
   }
 }

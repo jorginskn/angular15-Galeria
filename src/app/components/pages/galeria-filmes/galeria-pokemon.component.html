@@ -1,11 +1,7 @@
-<div class="title">
-  <h1>Card galeria</h1>
-</div>
 <div class="card__container">
-  <div class="card" *ngFor=" let pokemon  of pokemonData" >
+  <div class="card" *ngFor=" let pokemon  of pokemonData">
     <a routerLink="empresa">
-      <img  class="card__image" src="{{pokemonImage}}"
-        alt="Card Image">
+      <img class="card__image" src="{{getPokemonImage(+pokemon.url.split('/')[6])}}" alt="Card Image">
       <h3 class="card__title">{{ pokemon.name}}</h3>
       <p class="card__about">Conheça nossa plataforma de automação de negócios digitais. Descubra como podemos agregar
         tecnologia e
@@ -13,3 +9,4 @@
     </a>
   </div>
   <router-outlet></router-outlet>
+</div>

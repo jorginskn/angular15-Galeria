@@ -17,8 +17,7 @@ export class PokemonService {
   }
 
   getPokemonImage(id: number): Observable<PokemonImage> {
-
-
+    
     return this.httpClient.get<PokemonImage>(
       `https://pokeapi.co/api/v2/pokemon/${id}`
     );
