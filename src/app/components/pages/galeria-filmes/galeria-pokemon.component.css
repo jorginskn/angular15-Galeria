@@ -5,6 +5,7 @@
   margin: 5px;
   padding-top: 6.5rem;
   min-height: 80vh;
+  margin-bottom: 25px;
 }
 
 .card {
@@ -14,9 +15,6 @@
 }
 .card :hover {
   cursor: pointer;
-}
-.card__title :hover {
-  background-color: blue;
 }
 
 .card__about {
@@ -35,8 +33,13 @@
 
 .card h3 {
   padding: 10px;
-  background-color: #f9f9f9;
+  color: #2d353c;
   margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.card h3:hover {
+  color: #f2af00;
 }
 
 .card p {
