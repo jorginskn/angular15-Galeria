@@ -1,4 +1,4 @@
-import { GaleriaPokemonComponent } from './components/pages/galeria-filmes/galeria-pokemon.component';
+import { GaleriaPokemonComponent } from './components/pages/galeria-pokemon/galeria-pokemon.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CardsGaleriaComponent } from './components/cards-galeria/cards-galeria.component';

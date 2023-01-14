@@ -14,7 +14,7 @@ export class MenuBarComponent implements OnInit {
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
-    console.log(this.navbarOpen)
+
   }
 
 }

@@ -38,7 +38,6 @@ export class GaleriaPokemonComponent {
     const source = range(1, 50).pipe(
       flatMap((i) => this.pokemonService.getPokemonImage(i)),
       map((res) => {
-        console.log(res)
         return {
           id: res.id,
           image: res.sprites.other.dream_world.front_default,

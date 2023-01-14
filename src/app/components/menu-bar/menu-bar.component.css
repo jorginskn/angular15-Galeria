@@ -92,6 +92,20 @@ mat-icon {
     color: white;
     color: inherit white;
     padding: 50px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+    transition: .5s;
+    font-family: 'Poppyns',sans-serif;
+
+  }
+  .menu__itens__link:hover {
+     background-color: #f2af00;
+     opacity: 0.9;
+  }
+  .menu__itens__link ul hr {
+    width: 10px;
+
   }
   .menubar__itens__mobile ul li {
     display: flex;

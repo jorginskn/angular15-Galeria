@@ -13,7 +13,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { CardsGaleriaComponent } from './components/cards-galeria/cards-galeria.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GaleriaEmpresaComponent } from './components/pages/galeria-empresa/galeria-empresa.component';
-import { GaleriaPokemonComponent } from './components/pages/galeria-filmes/galeria-pokemon.component';
+import { GaleriaPokemonComponent } from './components/pages/galeria-pokemon/galeria-pokemon.component';
 
 @NgModule({
   declarations: [
