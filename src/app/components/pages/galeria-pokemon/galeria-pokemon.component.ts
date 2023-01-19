@@ -38,18 +38,20 @@ export class GaleriaPokemonComponent {
     const source = range(1, 50).pipe(
       flatMap((i) => this.pokemonService.getPokemonImage(i)),
       map((res) => {
+
         return {
           id: res.id,
           image: res.sprites.other.dream_world.front_default,
         };
       }),
       distinct((item: { id: number; image: string }) => item.id)
-    );
+      );
 
     source.pipe(toArray()).subscribe((images) => {
       this.pokemonIdImageArray = images;
     });
   }
+  
   getPokemonImage(id: number): string {
     const image = this.pokemonIdImageArray.find((img) => img.id === id);
     return image ? image.image : '';
